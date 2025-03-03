@@ -35,7 +35,7 @@ $().ready(function(){
         }
     })
     function calculateParkTime(enterHr, enterMin, exitHr, exitMin) {
-        if (enterHr < 4 || enterHr === 24 || exitHr < 4 || exitHr === 24) {alert("The car has been towed away."); return null}        
+        if (enterHr < 4 || enterHr === 24 || exitHr < 4 || exitHr === 24 || exitHr < enterHr) {alert("The car has been towed away."); return null}        
         let parkHr = exitHr - enterHr;
         let parkMin = exitMin - enterMin;
         if (parkMin < 0) {
